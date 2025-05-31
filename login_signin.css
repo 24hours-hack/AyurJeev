@@ -1,0 +1,152 @@
+/* Specific styles for Login/Signup page */
+
+/* Main Content Area */
+main {
+    padding: 40px 0;
+}
+
+/* Auth Card */
+.auth-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.auth-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #777;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-button.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.tab-button:hover:not(.active) {
+    color: #0056b3;
+}
+
+.auth-form {
+    display: none; /* Hidden by default */
+    padding-top: 20px;
+}
+
+.auth-form.active {
+    display: block; /* Show active form */
+}
+
+.auth-form h2 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.auth-form h2 i {
+    font-size: 1em;
+    color: #28a745;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.auth-form .btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-card {
+        margin: 20px auto;
+        padding: 25px;
+    }
+
+    .auth-tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tab-button {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 1.1em;
+    }
+
+    .auth-form h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 20px;
+    }
+
+    .auth-form h2 {
+        font-size: 1.5em;
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .auth-form .btn {
+        padding: 12px;
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Disease Identifier | AyurJeev</title>
+    <link rel="stylesheet" href="styles.css"> <link rel="stylesheet" href="image-identifier.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI Image Disease Identifier</h1>
+            <p>Upload images of visible symptoms for AI-based identification</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-heartbeat"></i>
+                <span>AyurJeev</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="telemedicine.html">Telemedicine</a></li>
+                <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                <li><a href="image-identifier.html" class="active">Image Identifier</a></li>
+                <li><a href="health-education.html">Health Education</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="image-identifier-content">
+            <div class="disclaimer-card">
+                <h2><i class="fas fa-exclamation-circle"></i> Important Health Disclaimer</h2>
+                <p>This tool uses AI to suggest potential conditions based on images of visible symptoms. It is for informational purposes only and IS NOT A MEDICAL DIAGNOSIS. Always consult a qualified healthcare professional for any health concerns or before making decisions about your health.</p>
+            </div>
+
+            <div class="image-upload-section">
+                <h2>Capture or Upload Symptom Image</h2>
+                
+                <div class="upload-options">
+                    <button id="uploadImageBtn" class="btn btn-secondary"><i class="fas fa-upload"></i> Upload Image</button>
+                    <button id="useCameraBtn" class="btn btn-primary"><i class="fas fa-camera"></i> Use Camera</button>
+                </div>
+                
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & Drop or Click to Upload Image</p>
+                    <p class="small">(JPG, PNG, WEBP up to 5MB)</p>
+                    <input type="file" id="imageInput" accept="image/jpeg,image/png,image/webp" style="display: none;">
+                </div>
+                
+                <div id="imagePreview" class="image-preview" style="display: none;">
+                    <img id="previewImage" src="#" alt="Preview">
+                    <button id="removeImageBtn" class="btn btn-danger"><i class="fas fa-trash"></i> Remove Image</button>
+                </div>
+            </div>
+
+            <div class="additional-context-section">
+                <h3>Optional: Additional Context</h3>
+                <p>e.g., How long has this been there? Is it painful? Age of person? This helps the AI.</p>
+                <textarea id="additionalContext" placeholder="Provide any additional information about the symptom..."></textarea>
+            </div>
+            
+            <button id="analyzeBtn" class="btn btn-primary analyze-btn" disabled><i class="fas fa-search"></i> Analyze Symptom Image</button>
+
+            <div id="resultsSection" class="results-section" style="display: none;">
+                <h2>Analysis Results</h2>
+                <div id="resultsContainer"></div>
+                <div id="urgentCareAlert" class="urgent-care-alert" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Urgent Care Recommendation</h3>
+                    <p id="urgentCareText"></p>
+                </div>
+                <div class="results-disclaimer">
+                    <p id="finalDisclaimer"></p>
+                </div>
+                <div class="actions">
+                    <button type="button" class="btn btn-secondary" onclick="window.print()">Print Results</button>
+                    <button type="button" class="btn btn-primary" id="newImageAnalysisBtn">New Analysis</button>
+                </div>
+            </div>
+
+            <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing image. Please wait...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>AyurJeev</h3>
+                    </div>
+                    <p>Empowering rural health through AI-powered solutions. Bridging the gap between technology and healthcare accessibility.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="telemedicine.html">Telemedicine</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="image-identifier.html">Image Identifier</a></li>
+                        <li><a href="health-education.html">Health Education</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">AI Diagnosis</a></li>
+                        <li><a href="#">Remote Consultation</a></li>
+                        <li><a href="#">Health Monitoring</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                        <li><a href="#">Preventive Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 123 456 7890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@ayurjeev.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rural Healthcare Hub, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="disclaimer">
+                    <p><strong>Important Disclaimer:</strong> AyurJeev provides information and suggestions based on AI analysis. It is not a substitute for professional medical diagnosis, treatment, or advice from a qualified healthcare provider. Always consult healthcare professionals for medical concerns.</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 AyurJeev. All rights reserved. | Empowering rural health through technology.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="image-identifier.js"></script>
+    <script src="index.js"></script> </body>
+</html>

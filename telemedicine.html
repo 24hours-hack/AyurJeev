@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicine Services | AyurJeev</title>
+    <link rel="stylesheet" href="styles.css"> <link rel="stylesheet" href="telemedicine.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Telemedicine Services</h1>
+            <p>Connect with healthcare professionals remotely for consultations</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-left">
+                <div class="nav-brand">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="telemedicine.html" class="active">Telemedicine</a></li>
+                <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                <li><a href="image-identifier.html">Image Identifier</a></li>
+                <li><a href="health-education.html">Health Education</a></li>
+            </ul>
+            <div class="nav-right">
+                </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="telemedicine-content">
+            <div class="telemedicine-card">
+                <h2><i class="fas fa-video"></i> Telemedicine Consultation</h2>
+                <p>Our Telemedicine feature allows you to generate a placeholder meeting link to simulate connecting for video consultations with qualified healthcare professionals.</p>
+                
+                <div id="telemedicineAuthPrompt" class="login-prompt">
+                    <h3>Please Log in or Sign up to access Telemedicine</h3>
+                    <div class="auth-buttons">
+                        <a href="login_signin.html?action=login" class="btn btn-primary">Login</a>
+                        <a href="login_signin.html?action=signup" class="btn btn-secondary">Signup</a>
+                    </div>
+                </div>
+
+                <div id="telemedicineService" class="telemedicine-service" style="display: none;">
+                    <h3>Generate Your Meeting Link</h3>
+                    <p>Click the button below to get a unique, placeholder meeting link for your consultation.</p>
+                    <button id="generateLinkBtn" class="btn btn-primary"><i class="fas fa-link"></i> Generate Meeting Link</button>
+                    <div id="meetingLinkDisplay" class="meeting-link-display" style="display: none;">
+                        <p>Your Meeting Link:</p>
+                        <a id="meetingLink" href="#" target="_blank"></a>
+                        <button id="copyLinkBtn" class="btn btn-secondary"><i class="fas fa-copy"></i> Copy Link</button>
+                    </div>
+                </div>
+
+                <div id="telemedicineInfo" class="telemedicine-info">
+                    <h3>What to Expect (Future):</h3>
+                    <ul>
+                        <li><i class="fas fa-shield-alt"></i> Secure and private video calls</li>
+                        <li><i class="fas fa-stethoscope"></i> Consultations for non-emergency conditions</li>
+                        <li><i class="fas fa-prescription-bottle-alt"></i> Prescription advice where applicable</li>
+                        <li><i class="fas fa-calendar-check"></i> Easy scheduling and access</li>
+                    </ul>
+                    
+                    <div class="important-note">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Important Note:</h4>
+                        <p>Telemedicine simulated here is NOT for medical emergencies. In case of an emergency, please contact your local emergency services immediately.</p>
+                        <p>We are working hard to bring full telemedicine services to you. Stay tuned for updates!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>AyurJeev</h3>
+                    </div>
+                    <p>Empowering rural health through AI-powered solutions. Bridging the gap between technology and healthcare accessibility.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="telemedicine.html">Telemedicine</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="image-identifier.html">Image Identifier</a></li>
+                        <li><a href="health-education.html">Health Education</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">AI Diagnosis</a></li>
+                        <li><a href="#">Remote Consultation</a></li>
+                        <li><a href="#">Health Monitoring</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                        <li><a href="#">Preventive Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 123 456 7890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@ayurjeev.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rural Healthcare Hub, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="disclaimer">
+                    <p><strong>Important Disclaimer:</strong> AyurJeev provides information and suggestions based on AI analysis. It is not a substitute for professional medical diagnosis, treatment, or advice from a qualified healthcare provider. Always consult healthcare professionals for medical concerns.</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 AyurJeev. All rights reserved. | Empowering rural health through technology.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="auth.js"></script> <script type="module" src="telemedicine.js"></script> </body>
+</html>
